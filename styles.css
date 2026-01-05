@@ -287,12 +287,6 @@ nav {
   transform-origin: center;
 }
 
-
-/* Push watermark out (not removed) */
-.spline-bg {
-  pointer-events: none;
-}
-
 /* Text above robot */
 .hero-overlay {
   position: absolute;
