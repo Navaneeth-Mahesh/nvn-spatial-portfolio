@@ -3,199 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NAVANEETH-PORTFOLIO</title>
-
-  <!-- Google Font -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <!-- Font Awesome -->
-  <script
-    src="https://kit.fontawesome.com/a076d05399.js"
-    crossorigin="anonymous">
-  </script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <title>Navaneeth — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- ================= SCROLL INDICATOR ================= -->
-  <div class="scroll-bar">
-    <div class="scroll-progress"></div>
+<!-- NOISE -->
+<div id="noise"></div>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <p class="preloader-text">Loading Portfolio</p>
+  <div class="preloader-bar-wrap">
+    <div class="preloader-bar" id="pbar"></div>
   </div>
+  <p class="preloader-count" id="pcount">0%</p>
+</div>
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="logo">N</div>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">NAV —</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button id="theme-toggle" class="theme-toggle">Light Mode</button></li>
+  </ul>
+</nav>
 
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ================= SOCIAL BAR ================= -->
-  <aside class="left-bar">
-    <div class="arrow-line"></div>
-  </aside>
-
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="hero">
-
-    <!-- SPLINE BACKGROUND -->
-    <spline-viewer
-      class="spline-bg"
-      url="https://prod.spline.design/UYoLO8uxXEcneMtp/scene.splinecode">
-    </spline-viewer>
-
-    <!-- HERO OVERLAY -->
-    <div class="hero-overlay">
-      <h1 class="hero-logo">NAVANEETH</h1>
-      <div class="hero-divider"></div>
-
-      <div class="hero-meta">
-        <span class="hero-role">FULL STACK DEVELOPER</span>
-        <a href="#" class="hero-btn">RESUME</a>
+<!-- HERO -->
+<section id="hero">
+  <canvas id="three-canvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-name">
+      Nava<br><em>neeth</em>
+    </h1>
+    <div class="hero-meta">
+      <p class="hero-role">Full Stack Developer · UI/UX · Content Creator</p>
+      <p class="hero-desc">Crafting digital experiences that live at the intersection of code, design, and storytelling.</p>
+      <div class="hero-scroll-hint">
+        <span class="scroll-line"></span>
+        Scroll to explore
       </div>
     </div>
+  </div>
+  <div class="h-rule"></div>
+</section>
 
-  </section>
+<!-- TICKER -->
+<div class="ticker-section">
+  <div class="ticker-track">
+    <span class="ticker-item">Full Stack Developer</span>
+    <span class="ticker-item">UI/UX Design</span>
+    <span class="ticker-item">Video Editing</span>
+    <span class="ticker-item">Python</span>
+    <span class="ticker-item">Frontend Engineering</span>
+    <span class="ticker-item">Content Creation</span>
+    <span class="ticker-item">Data Structures</span>
+    <span class="ticker-item">Full Stack Developer</span>
+    <span class="ticker-item">UI/UX Design</span>
+    <span class="ticker-item">Video Editing</span>
+    <span class="ticker-item">Python</span>
+    <span class="ticker-item">Frontend Engineering</span>
+    <span class="ticker-item">Content Creation</span>
+    <span class="ticker-item">Data Structures</span>
+  </div>
+</div>
 
-  <!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <section id="about">
-  <div class="about-split">
-
-    <!-- LEFT -->
-    <div class="about-left">
-      <h3>About</h3>
-
-      <p>
-        I design and build digital experiences that balance clarity,
-        performance, and intent.
-      </p>
-
-      <p>
-        I work across <strong>UI / UX design</strong>, <strong>frontend development</strong>,
-        and <strong>Python-based backend systems</strong>, focusing on products
-        that feel intuitive and scale cleanly.
-      </p>
-
-      <p>
-        Currently deepening my skills in <strong>full-stack engineering</strong> and
-        <strong>data structures & algorithms</strong> to strengthen both design
-        decisions and system.....
-      </p>
-    </div>
-    <!-- RIGHT IMAGE -->
-    <div class="about-image-wrap">
-        <img src="profile.jpeg" alt="Navaneeth portrait" />
-    </div>
-
-  </div>
-</section>
-
-  <!-- ================= WORKS ================= -->
-   <section id="works" class="works-section">
-    <h2>Works</h2>
-    <p>______________________ Updated Soon ______________________</p>
-   </section>
-    <!-- ================= SKILLS ================= -->
-  <section id="skills" class="skills-section">
-    <h2 class="section-title">
-      My <span class="glow-text">Skills</span>
+  <div class="section-label">001 — About</div>
+  <div class="about-grid">
+    <h2 class="about-headline">
+      Building things<br>that <em>matter</em><br>& look good<br>doing it.
     </h2>
-
-    <div class="skills-container">
-
-      <div class="skill-card">
-        <h3>Frontend Development</h3>
-        <p>HTML, CSS, JavaScript, React.js</p>
+    <div class="about-right">
+      <p class="about-body">
+        I'm Navaneeth — a full stack developer and UI/UX designer with a passion for building beautiful, performant web experiences. I blend technical precision with a designer's eye to create products that don't just work — they feel alive.
+      </p>
+      <p class="about-body">
+        Beyond the code, I'm a content creator who documents the craft — video editing, storytelling, and sharing the developer journey across platforms.
+      </p>
+      <div class="about-stats">
+        <div>
+          <p class="stat-num">∞</p>
+          <p class="stat-label">Ideas in queue</p>
+        </div>
+        <div>
+          <p class="stat-num">01</p>
+          <p class="stat-label">Goal: excellence</p>
+        </div>
+        <div>
+          <p class="stat-num">6+</p>
+          <p class="stat-label">Skills</p>
+        </div>
+        <div>
+          <p class="stat-num">3</p>
+          <p class="stat-label">Platforms active</p>
+        </div>
       </div>
-
-      <div class="skill-card">
-        <h3>Python</h3>
-        <p>Basics of Python</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Java</h3>
-        <p>Basic Java concepts</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Data Structures</h3>
-        <p>Arrays, Stacks, Queues, Trees</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>UI / UX Design</h3>
-        <p>Figma, Canva, Photoshop</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Data Science</h3>
-        <p>Learning in progress…</p>
-      </div>
-
     </div>
-  </section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact-signal">
-  <div class="signal-bg"></div>
-  <div class="signal-noise"></div>
-
-  <h2>
-    Let’s build something<br />
-    <span>unforgettable.</span>
-  </h2>
-
-  <p>
-    No forms. No noise.  
-    Just real conversations and bold ideas.
-  </p>
-
-  <div class="contact-actions">
-    <span class="email-chip">
-      guraninavaneeth@gmail.com
-    </span>
   </div>
 </section>
-  <!-- ================= FOOTER ================= -->
-<footer class="minimal-footer">
-  <div class="footer-top">
-    <span>© 2025 Navaneeth</span>
-    <nav>
-      <a href="https://www.instagram.com/nav.exexx/?next=%2F">Instagram</a>
-      <a href="https://youtube.com/@nav_exexx?si=HEGZHeJT53Erg7a3">Youtube</a>     
-      <a href="https://www.linkedin.com/in/navaneeth-gurani-21a284324/">LinkedIn</a>
 
-    </nav>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">002 — Skills</div>
+
+  <div class="skills-marquee-wrap">
+    <div class="skills-marquee">
+      <span class="marquee-item">Python</span>
+      <span class="marquee-item">Java Basics</span>
+      <span class="marquee-item">Frontend</span>
+      <span class="marquee-item">Backend</span>
+      <span class="marquee-item">UI/UX Design</span>
+      <span class="marquee-item">Video Editing</span>
+      <span class="marquee-item">Content Creation</span>
+      <span class="marquee-item">DSA</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Python</span>
+      <span class="marquee-item">Java Basics</span>
+      <span class="marquee-item">Frontend</span>
+      <span class="marquee-item">Backend</span>
+      <span class="marquee-item">UI/UX Design</span>
+      <span class="marquee-item">Video Editing</span>
+      <span class="marquee-item">Content Creation</span>
+      <span class="marquee-item">DSA</span>
+    </div>
   </div>
-  <div class="footer-line"></div>
-  <p>
-    Designing digital experiences that feel alive.
-  </p>
-</footer>
-<div class="cursor-glow"></div>
-  <!-- ================= SCRIPTS ================= -->
-  <script src="script.js"></script>
 
-  <!-- Spline Viewer -->
-  <script
-    type="module"
-    src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js">
-  </script>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <p class="skill-num">01</p>
+      <h3 class="skill-name">Python</h3>
+      <p class="skill-desc">Scripting · Automation<br>Backend logic · APIs</p>
+    </div>
+    <div class="skill-card">
+      <p class="skill-num">02</p>
+      <h3 class="skill-name">Frontend Dev</h3>
+      <p class="skill-desc">HTML · CSS · JavaScript<br>Responsive · Interactive</p>
+    </div>
+    <div class="skill-card">
+      <p class="skill-num">03</p>
+      <h3 class="skill-name">UI/UX Design</h3>
+      <p class="skill-desc">Figma · Prototyping<br>User flows · Aesthetics</p>
+    </div>
+    <div class="skill-card">
+      <p class="skill-num">04</p>
+      <h3 class="skill-name">Java & DSA</h3>
+      <p class="skill-desc">OOP basics · Algorithms<br>Data structures · Logic</p>
+    </div>
+    <div class="skill-card">
+      <p class="skill-num">05</p>
+      <h3 class="skill-name">Video Editing</h3>
+      <p class="skill-desc">Storytelling · Motion<br>Color grading · Cuts</p>
+    </div>
+    <div class="skill-card">
+      <p class="skill-num">06</p>
+      <h3 class="skill-name">Full Stack</h3>
+      <p class="skill-desc">End-to-end development<br>APIs · Databases · Deploy</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="projects-header">
+    <h2 class="projects-title">
+      Selected<br><em>Works</em>
+    </h2>
+    <span class="coming-soon-badge">Projects Coming Soon</span>
+  </div>
+
+  <div class="projects-placeholder">
+    <div class="project-slot">
+      <span class="slot-num">01</span>
+      <div class="slot-center">
+        <span class="slot-icon">◈</span>
+        <p class="slot-text">Project slot</p>
+      </div>
+    </div>
+    <div class="project-slot">
+      <span class="slot-num">02</span>
+      <div class="slot-center">
+        <span class="slot-icon">◈</span>
+        <p class="slot-text">Project slot</p>
+      </div>
+    </div>
+    <div class="project-slot">
+      <span class="slot-num">03</span>
+      <div class="slot-center">
+        <span class="slot-icon">◈</span>
+        <p class="slot-text">Project slot</p>
+      </div>
+    </div>
+    <div class="project-slot">
+      <span class="slot-num">04</span>
+      <div class="slot-center">
+        <span class="slot-icon">◈</span>
+        <p class="slot-text">Project slot</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT CREATION -->
+<section id="content">
+  <div class="section-label">004 — Content</div>
+  <div class="content-grid">
+    <div>
+      <h2 class="content-left">
+        Beyond<br>the <em>code</em>,<br>I create.
+      </h2>
+    </div>
+    <div class="content-right">
+      <p class="content-body">
+        I document the developer journey — tutorials, builds, design breakdowns, and the messy reality of creating things from scratch. Content that's honest, visual, and worth your time.
+      </p>
+      <div class="content-platforms">
+        <a href="https://www.instagram.com/nav.aestx_?igsh=MXQ1M3MxZXU0d2VqZQ%3D%3D&utm_source=qr" target="_blank" class="platform-tag">Instagram ↗</a>
+        <a href="https://www.linkedin.com/in/navaneeth-gurani-21a284324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="platform-tag">LinkedIn ↗</a>
+        <a href="https://youtube.com/@nav_exexx?si=5PdwfLYxqLrldz5v" target="_blank" class="platform-tag">YouTube ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">005 — Contact</div>
+  <h2 class="contact-big">
+    Let's build<br><em>something</em><br>together.
+  </h2>
+  <div class="contact-row">
+    <div class="contact-links">
+      <a href="https://www.instagram.com/nav.aestx_?igsh=MXQ1M3MxZXU0d2VqZQ%3D%3D&utm_source=qr" target="_blank" class="contact-link">Instagram</a>
+      <a href="https://www.linkedin.com/in/navaneeth-gurani-21a284324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="https://youtube.com/@nav_exexx?si=5PdwfLYxqLrldz5v" target="_blank" class="contact-link">YouTube</a>
+      <a href="mailto:guaninavaneeth@gmail.com" class="contact-link">Email</a>
+    </div>
+    <p class="contact-email">guraninavaneeth@gmail.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-left">© 2025 Navaneeth — All rights reserved</p>
+  <p class="footer-right">Full Stack Developer · India</p>
+</footer>
+
+<!-- LIBRARIES -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
